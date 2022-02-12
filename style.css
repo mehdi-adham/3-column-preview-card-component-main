@@ -17,4 +17,94 @@
 }
 body{
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-Lexend-Deca);
+    color: var(--color-Very-light-gray);
+    letter-spacing: 0.8px;
+}
+/* main */
+.preview-card-container{
+    display: flex;
+    margin: 15px;
+}
+.col-1, .col-2, .col-3{
+    width:300px;
+    padding:45px;
+}
+.col-1{
+    background-color: var(--color-Bright-orange);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.col-2{
+    background-color: var(--color-Dark-cyan);
+}
+.col-3{
+    background-color: var(--color-Very-dark-cyan);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.col-icon{
+    margin-bottom: 28px;
+}
+.title{
+    margin-bottom: 28px;
+    font-family: var(--font-Big-Shoulders-Display);
+    font-size: 38px;
+    text-transform: uppercase;
+}
+.description{
+    line-height: 24px;
+    font-size: 14px;
+    color: var(--color-Transparent-white);
+}
+.col-footer{
+    padding-top: 70px;
+}
+.more{
+    font-size: 14px;
+    text-decoration: none;
+    width: fit-content;
+    display:block ;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background-color: var(--color-Very-light-gray);
+    border: solid 3px var(--color-Very-light-gray);
+    transition: 500ms ease;
+}
+.col-1 .more{
+    color: var(--color-Bright-orange);
+}
+.col-2 .more{
+    color: var(--color-Dark-cyan);
+}
+.col-3 .more{
+    color: var(--color-Very-dark-cyan);
+}
+.more:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-Transparent-white);
+}
+
+
+@media screen and (max-width:480px) {
+    .preview-card-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .col-1{
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 6px;
+    }
+    .col-3{
+        border-top-right-radius: unset;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
 }
